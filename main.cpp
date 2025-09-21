@@ -44,6 +44,7 @@ int main() {
             cin >> tarefas[i].J >> tarefas[i].C >> tarefas[i].P >> tarefas[i].D;
         }
         for (int i = 0; i < TP; ++i) {
+            if (tarefas[i].D > tarefas[i].P) continue;
             int Ri = calcularTempoResposta(tarefas, i);
             cout << i + 1 << " " << Ri << " " << (Ri <= tarefas[i].D ? "YES" : "NO") << endl;
         }
